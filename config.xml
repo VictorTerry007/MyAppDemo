@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget id="A6057986443777">
+    <name>DemoApp</name>
+    <content src="./DemoApp.html"/>
+    <preference name="appBackground" value="blue" />
+</widget>

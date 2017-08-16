@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            background-color: pink;
+            height: 50px;
+            font-size: 20px;
+            line-height: 50px;
+            color: aqua;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<!--<div onclick="getLocation()">Hello Apicloud</div>-->
+<div onclick="openScaner()">Hello Apicloud</div>
+</body>
+<script>
+//    function getLocation(){
+//        alert('getLocation in');
+//        var baiduLocation = api.require('baiduLocation');
+//        baiduLocation.getLocation(function(ret, err) {
+//            if (ret) {
+//                alert(JSON.stringify(ret));
+//            } else {
+//                alert(JSON.stringify(err));
+//            }
+//        });
+//    }
+    function openScaner(){
+        alert('openScanner in');
+        api.confirm({
+            'title':'APICloud',
+            'msg':'是否开启二维码扫描',
+            'button':['打开','取消']
+        },function(ret,err){
+        if(ret.buttonIndex == 1){
+            var scaner=api.require('scanner');
+            scaner.open();
+        }else{
+        }
+        });
+    }
+</script>
+</html>
